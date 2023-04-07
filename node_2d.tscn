@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://uyqaj3kavfyc"]
+
+[ext_resource type="Script" path="res://Wizard_main.gd" id="1_a8q2h"]
+[ext_resource type="Texture2D" uid="uid://djnljtvhxf4c4" path="res://Wizard_test.png" id="1_x1au3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2qjq"]
+size = Vector2(80, 80)
+
+[node name="Main" type="Node2D"]
+
+[node name="Wizard" type="Area2D" parent="."]
+position = Vector2(531, 255)
+rotation = 0.785398
+script = ExtResource("1_a8q2h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wizard"]
+shape = SubResource("RectangleShape2D_d2qjq")
+
+[node name="Sprite2D" type="Sprite2D" parent="Wizard"]
+texture = ExtResource("1_x1au3")
